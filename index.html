@@ -1,237 +1,790 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Developer Portfolio</title>
+    <meta name="description" content="The personal portfolio of Earhl Nash Dumaquita, also known as Steinz.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    <title>Steinz — Developer Portfolio</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #10101c;
-            color: #f5f5f5;
-            line-height: 1.7;
-        }
-
-        header {
-            background: #19192b;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        header h2 {
-            color: #b89cff;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 18px;
-        }
-
-        nav a:hover {
-            color: #b89cff;
-        }
-
-        section {
-            padding: 75px 10%;
-        }
-
-        .hero {
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            color: #b89cff;
-        }
-
-        .hero p {
-            max-width: 650px;
-            margin-top: 15px;
-        }
-
-        h2 {
-            color: #b89cff;
-            margin-bottom: 20px;
-        }
-
-        .card {
-            background: #1c1c30;
-            padding: 22px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skills span {
-            background: #30264a;
-            color: #d8c8ff;
-            padding: 10px 18px;
-            border-radius: 20px;
-        }
-
-        a {
-            color: #c9aaff;
-        }
-
-        footer {
-            background: #19192b;
-            text-align: center;
-            padding: 25px;
-            color: #aaa;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <div class="background-grain" aria-hidden="true"></div>
 
-    <header>
-        <h2>My Portfolio.</h2>
+    <!-- HEADER -->
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Steinz home">
+            <span class="brand-mark">S<span>.</span></span>
+            <span class="brand-name">STEINZ<span>_</span></span>
+        </a>
 
-        <nav aria-label="Main navigation">
-            <a href="#home">Home</a>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Main navigation">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
             <a href="#projects">Projects</a>
             <a href="#goals">Goals</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-contact">
+                Contact <span>↗</span>
+            </a>
         </nav>
     </header>
 
     <main>
 
-        <section id="home" class="hero">
-            <p>HELLO! WELCOME TO MY PORTFOLIO</p>
-            <h1>Hi, I'm [Your Name].</h1>
-            <h3>Aspiring Web Developer | BSIT Student</h3>
-
-            <p>
-                I am an aspiring developer who enjoys learning
-                about technology, creating websites, and exploring
-                new ways to solve problems through programming.
-            </p>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-
-            <article class="card">
-                <p>
-                    I am a Bachelor of Science in Information Technology
-                    student who is currently developing my knowledge
-                    and skills in programming and web development.
-                    I enjoy exploring technology and learning how
-                    websites and applications are created.
+        <!-- HERO SECTION -->
+        <section class="hero section-wrap" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">
+                    <span class="status-dot"></span>
+                    AVAILABLE FOR LEARNING & NEW CHALLENGES
                 </p>
 
-                <p>
-                    I believe that every project is an opportunity
-                    to improve my abilities, gain experience,
-                    and discover something new.
+                <p class="hero-kicker">HELLO, WORLD. I'M</p>
+
+                <h1>
+                    EARHL NASH<br>
+                    <span>DUMAQUITA</span>
+                </h1>
+
+                <div class="hero-role">
+                    <span class="pixel-cursor"></span>
+                    ALSO KNOWN AS <strong>STEINZ</strong>
+                </div>
+
+                <p class="hero-quote">
+                    “Hard work is worthless for those that don’t believe in themselves.”
                 </p>
-            </article>
+
+                <p class="hero-intro">
+                    IT student, curious builder, and someone who learns best by doing.
+                    I’m working toward becoming a developer who can turn practical ideas
+                    into useful digital experiences.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">
+                        VIEW MY WORK <span>↘</span>
+                    </a>
+
+                    <a class="text-link" href="#about">
+                        GET TO KNOW ME <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <aside class="hero-art" aria-label="Profile image area">
+                <div class="art-label label-top">
+                    PLAYER PROFILE <span>01 / 06</span>
+                </div>
+
+                <div class="profile-frame">
+                    <img
+                        src="PLAYER_PROFILE.png"
+                        alt="Pixel-art profile of Earhl Nash Dumaquita"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                    >
+
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">＋</span>
+                        <strong>YOUR PHOTO HERE</strong>
+                        <small>PLAYER_PROFILE.png</small>
+                    </div>
+                </div>
+
+                <div class="art-label label-bottom">
+                    <span class="tiny-square"></span>
+                    DEVELOPER IN PROGRESS
+                </div>
+
+                <div class="floating-code code-one">0101</div>
+                <div class="floating-code code-two">&lt;/&gt;</div>
+            </aside>
+
+            <a class="scroll-cue" href="#about">
+                <span></span> SCROLL TO EXPLORE
+            </a>
         </section>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
+        <!-- ABOUT SECTION -->
+        <section class="section-wrap section-block" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">01 / THE PERSON BEHIND THE SCREEN</p>
+                <h2>A LITTLE <span>ABOUT ME.</span></h2>
+            </div>
 
-            <div class="card">
-                <div class="skills">
-                    <span>HTML (Beginner)</span>
-                    <span>CSS (Beginner)</span>
-                    <span>Python (Beginner)</span>
-                    <span>Git</span>
-                    <span>GitHub</span>
+            <div class="about-grid">
+                <div class="about-main panel">
+                    <p class="lead">
+                        I’m <strong>Earhl Nash Dumaquita</strong>, a 19-year-old Bachelor of Science
+                        in Information Technology student who goes by <strong>Steinz</strong>.
+                        I enjoy technology, learning through hands-on work, and finding ways to
+                        turn what I learn into something real.
+                    </p>
+
+                    <p>
+                        I have already had experience building a portfolio during my work immersion,
+                        and I’m continuing to improve my skills through school projects, personal
+                        experiments, and work. I value the lessons that come from both successful
+                        results and difficult tasks.
+                    </p>
+
+                    <p>
+                        Outside the technical side, I’m someone who values time with the people
+                        important to me. I work to support my needs and wants, enjoy meaningful
+                        experiences, and make memories along the way.
+                    </p>
+
+                    <a
+                        class="inline-link"
+                        href="https://www.facebook.com/itz.naszio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        FIND ME ON FACEBOOK <span>↗</span>
+                    </a>
+                </div>
+
+                <aside class="about-side">
+                    <div class="mini-stat panel">
+                        <span class="stat-number">19</span>
+                        <span class="stat-label">YEARS OLD</span>
+                    </div>
+
+                    <div class="mini-note panel">
+                        <span class="note-mark">“</span>
+                        <p>Learn it. Try it. Get better. Repeat.</p>
+                        <small>MY PERSONAL APPROACH</small>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- PERSONAL LIFE AND WORK EXPERIENCE -->
+            <div class="life-grid">
+
+                <!-- GIRLFRIEND / PERSONAL LIFE -->
+                <article class="life-card panel">
+                    <div class="life-card-top">
+                        <span>OFF-SCREEN LIFE</span>
+                        <span>01</span>
+                    </div>
+
+                    <div class="landscape-frame">
+                        <img
+                            src="Girlfriend.png"
+                            alt="Photo with someone important to Steinz"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                        >
+
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">＋</span>
+                            <strong>ADD YOUR PHOTO</strong>
+                            <small>Girlfriend.png</small>
+                        </div>
+                    </div>
+
+                    <h3>People Over Pixels</h3>
+                    <p>
+                        I value the people who make ordinary days memorable,
+                        especially my girlfriend and the time we spend together.
+                    </p>
+                </article>
+
+                <!-- WORK EXPERIENCE 01: TELEPERFORMANCE -->
+                <article class="life-card panel">
+                    <div class="life-card-top">
+                        <span>WORK EXPERIENCE / 01</span>
+                        <span>02</span>
+                    </div>
+
+                    <div class="landscape-frame">
+                        <img
+                            src="TP_work.png"
+                            alt="Photo representing Steinz's customer service experience at Teleperformance"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                        >
+
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">＋</span>
+                            <strong>ADD YOUR PHOTO</strong>
+                            <small>TP_work.png</small>
+                        </div>
+                    </div>
+
+                    <h3>Customer Service Agent</h3>
+                    <p>
+                        <strong>Teleperformance · Around 2 months</strong><br>
+                        Built experience communicating with customers, listening carefully,
+                        and handling concerns professionally.
+                    </p>
+                </article>
+
+                <!-- WORK EXPERIENCE 02: LAZADA -->
+                <article class="life-card panel">
+                    <div class="life-card-top">
+                        <span>WORK EXPERIENCE / 02</span>
+                        <span>03</span>
+                    </div>
+
+                    <div class="landscape-frame">
+                        <img
+                            src="Lazada_work.png"
+                            alt="Photo representing Steinz's parcel handling work as a mover"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                        >
+
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">＋</span>
+                            <strong>ADD YOUR PHOTO</strong>
+                            <small>Lazada_work.png</small>
+                        </div>
+                    </div>
+
+                    <h3>Warehouse Mover</h3>
+                    <p>
+                        <strong>Lazada · Around 1 month</strong><br>
+                        Handled and moved parcels and other heavy items.
+                        The work was physically demanding and taught me to stay disciplined.
+                    </p>
+                </article>
+
+                <!-- CURRENT WORK: AI DATA ANNOTATOR -->
+                <article class="life-card panel">
+                    <div class="life-card-top">
+                        <span>CURRENT WORK</span>
+                        <span>04</span>
+                    </div>
+
+                    <div class="landscape-frame">
+                        <img
+                            src="Telus_AiDataAnnotator_work.png"
+                            alt="Photo representing Steinz's AI data annotation work at TELUS"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                        >
+
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">＋</span>
+                            <strong>ADD YOUR PHOTO</strong>
+                            <small>Telus_AiDataAnnotator_work.png</small>
+                        </div>
+                    </div>
+
+                    <h3>AI Data Annotator Specialist</h3>
+                    <p>
+                        <strong>Current role</strong><br>
+                        Working with data annotation tasks that require attention to detail,
+                        consistency, and following specific guidelines.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="section-wrap section-block" id="skills">
+            <div class="section-heading">
+                <p class="eyebrow">02 / WHAT I'M LEARNING</p>
+                <h2>SKILLS & <span>TOOLKIT.</span></h2>
+                <p class="section-description">
+                    A growing set of technical and practical skills. I’m still learning,
+                    and I’m honest about where I am in the process.
+                </p>
+            </div>
+
+            <div class="skills-layout">
+                <div class="panel skill-panel">
+                    <div class="panel-title">
+                        <span class="red-square"></span>
+                        TECHNICAL SKILLS
+                    </div>
+
+                    <ul class="skill-list">
+                        <li>
+                            <span class="skill-index">01</span>
+                            <span>
+                                <strong>HTML & CSS</strong>
+                                <small>Building and styling structured webpages</small>
+                            </span>
+                            <em>LEARNING</em>
+                        </li>
+
+                        <li>
+                            <span class="skill-index">02</span>
+                            <span>
+                                <strong>Python Programming</strong>
+                                <small>Basic programming logic and problem-solving</small>
+                            </span>
+                            <em>BEGINNER–INTERMEDIATE</em>
+                        </li>
+
+                        <li>
+                            <span class="skill-index">03</span>
+                            <span>
+                                <strong>Git & GitHub</strong>
+                                <small>Version control, repositories, commits, and collaboration</small>
+                            </span>
+                            <em>LEARNING</em>
+                        </li>
+
+                        <li>
+                            <span class="skill-index">04</span>
+                            <span>
+                                <strong>Microsoft Office</strong>
+                                <small>Working with documents, spreadsheets, and presentations</small>
+                            </span>
+                            <em>WORKING KNOWLEDGE</em>
+                        </li>
+
+                        <li>
+                            <span class="skill-index">05</span>
+                            <span>
+                                <strong>Basic UI & System Design</strong>
+                                <small>Planning layouts, forms, and application workflows</small>
+                            </span>
+                            <em>LEARNING</em>
+                        </li>
+
+                        <li>
+                            <span class="skill-index">06</span>
+                            <span>
+                                <strong>AI Data Annotation</strong>
+                                <small>Following task guidelines and reviewing data carefully</small>
+                            </span>
+                            <em>WORK EXPERIENCE</em>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel soft-panel">
+                    <div class="panel-title">
+                        <span class="red-square"></span>
+                        WORK HABITS & STRENGTHS
+                    </div>
+
+                    <ul class="strength-list">
+                        <li><span>↗</span> Time management</li>
+                        <li><span>↗</span> Attention to detail</li>
+                        <li><span>↗</span> Adaptability</li>
+                        <li><span>↗</span> Communication and teamwork</li>
+                        <li><span>↗</span> Willingness to learn</li>
+                        <li><span>↗</span> Persistence under pressure</li>
+                    </ul>
+
+                    <div class="skill-footnote">
+                        SKILL LEVELS ARE SELF-DESCRIBED AND WILL DEVELOP WITH PRACTICE.
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>My Projects</h2>
+        <!-- EDUCATION SECTION -->
+        <section class="section-wrap section-block" id="education">
+            <div class="section-heading">
+                <p class="eyebrow">03 / THE LEARNING PATH</p>
+                <h2>EDUCATIONAL <span>BACKGROUND.</span></h2>
+            </div>
 
-            <article class="card">
-                <h3>My First GitHub Project</h3>
-                <p>
-                    This is my first personal developer portfolio,
-                    created using HTML as part of my Web Programming
-                    laboratory activity.
-                </p>
-                <p>Status: In Progress</p>
-            </article>
+            <div class="panel education-panel">
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>LEVEL</th>
+                                <th>SCHOOL</th>
+                                <th>PROGRAM / DETAILS</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
 
-            <article class="card">
-                <h3>Other Academic Projects</h3>
-                <p>
-                    I am currently exploring different programming
-                    activities and system development projects
-                    as part of my IT studies.
+                        <tbody>
+                            <tr>
+                                <td>Elementary</td>
+                                <td>Kaunlaran Elementary School</td>
+                                <td>Elementary Education</td>
+                                <td><span class="table-tag">COMPLETED</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Junior High School</td>
+                                <td>Deparo High School</td>
+                                <td>Junior High School</td>
+                                <td><span class="table-tag">COMPLETED</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Senior High School</td>
+                                <td>Escuela de Sophia of Caloocan Inc.</td>
+                                <td>Senior High School</td>
+                                <td><span class="table-tag">COMPLETED</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>College</td>
+                                <td>National University</td>
+                                <td>Bachelor of Science in Information Technology</td>
+                                <td><span class="table-tag current">CURRENT</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="table-caption">
+                    EDUCATION IS A WORK IN PROGRESS — ONE STEP AT A TIME.
                 </p>
-            </article>
+            </div>
         </section>
 
-        <section id="goals">
-            <h2>Career Goals</h2>
-
-            <article class="card">
-                <p>
-                    My goal is to become a skilled web developer
-                    with a strong foundation in front-end and
-                    back-end development.
+        <!-- PROJECTS SECTION -->
+        <section class="section-wrap section-block" id="projects">
+            <div class="section-heading">
+                <p class="eyebrow">04 / BUILT, TESTED, AND LEARNED FROM</p>
+                <h2>SELECTED <span>PROJECTS.</span></h2>
+                <p class="section-description">
+                    A few academic and personal projects that reflect what I have
+                    been exploring so far.
                 </p>
+            </div>
 
-                <p>
-                    I want to gain practical experience, build
-                    useful applications, continuously improve
-                    my programming skills, and eventually work
-                    with a team of developers to create meaningful
-                    digital solutions.
-                </p>
-            </article>
+            <div class="projects-grid">
+
+                <!-- PROJECT 01: MOVIE PLAYLIST SYSTEM -->
+                <article class="project-card panel">
+                    <div class="project-meta">
+                        <span>DATA STRUCTURES</span>
+                        <span>PROJECT 01</span>
+                    </div>
+
+                    <div class="project-image">
+                        <img
+                            src="MoviePlaylistSystem.png"
+                            alt="Screenshot of the Movie Playlist System"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                        >
+
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">＋</span>
+                            <strong>PROJECT SCREENSHOT</strong>
+                            <small>MoviePlaylistSystem.png</small>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <h3>Movie Playlist System</h3>
+                        <p>
+                            An academic project for Data Structures focused on organizing
+                            a movie collection and applying programming concepts to manage
+                            playlist information.
+                        </p>
+
+                        <div class="tag-row">
+                            <span>DATA STRUCTURES</span>
+                            <span>PROGRAMMING</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 02: NU HSO PORTAL -->
+                <article class="project-card panel">
+                    <div class="project-meta">
+                        <span>RPA SYSTEM</span>
+                        <span>PROJECT 02</span>
+                    </div>
+
+                    <div class="project-image">
+                        <img
+                            src="NUHSOPortal.png"
+                            alt="Screenshot of the NU Health Services Office Portal"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                        >
+
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">＋</span>
+                            <strong>PROJECT SCREENSHOT</strong>
+                            <small>NUHSOPortal.png</small>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <h3>NU HSO Portal</h3>
+                        <p>
+                            A health services office portal project designed to organize
+                            student health information, appointment booking, announcements,
+                            and administrative tasks.
+                        </p>
+
+                        <div class="tag-row">
+                            <span>POWER APPS</span>
+                            <span>RPA SYSTEM</span>
+                            <span>UI DESIGN</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 03: MONTHSARY LOVE LETTER -->
+                <article class="project-card panel">
+                    <div class="project-meta">
+                        <span>PERSONAL PROJECT</span>
+                        <span>PROJECT 03</span>
+                    </div>
+
+                    <div class="project-image">
+                        <img
+                            src="MonthsaryLoveLetter.png"
+                            alt="Screenshot of a coded monthsary letter website"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                        >
+
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">＋</span>
+                            <strong>PROJECT SCREENSHOT</strong>
+                            <small>MonthsaryLoveLetter.png</small>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <h3>Monthsary Love Letter</h3>
+                        <p>
+                            A personal coded letter made as a digital gift. It combines
+                            a simple webpage with personal writing and design to create
+                            a meaningful experience.
+                        </p>
+
+                        <div class="tag-row">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PERSONAL WEB PROJECT</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
+        <!-- CAREER GOALS SECTION -->
+        <section class="section-wrap section-block" id="goals">
+            <div class="section-heading">
+                <p class="eyebrow">05 / WHAT COMES NEXT</p>
+                <h2>THE NEXT <span>LEVEL.</span></h2>
+            </div>
 
-            <article class="card">
-                <p>GitHub:
-                    <a href="https://github.com/steInz02" target="_blank">
-                        github.com/steInz02
-                    </a>
-                </p>
+            <div class="goals-layout">
+                <div class="goal-intro panel">
+                    <p class="eyebrow">MY CAREER DIRECTION</p>
 
-                <p>Email:
-                    <a href="mailto:earhlnash02@gmail.com">
-                        earhlnash02@gmail.com
-                    </a>
+                    <h3>
+                        Learn to earn.<br>
+                        Earn through what I learn.
+                    </h3>
+
+                    <p>
+                        I want to build a career where consistent effort, useful skills,
+                        and real experience create opportunities. I know progress takes
+                        time, so I’m prepared to start with the fundamentals and learn
+                        through the difficult parts.
+                    </p>
+                </div>
+
+                <div class="goal-list panel">
+                    <ol>
+                        <li>
+                            <span>01</span>
+                            <div>
+                                <strong>Master the fundamentals</strong>
+                                <p>
+                                    Strengthen my foundation in programming, web development,
+                                    databases, and problem-solving.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span>02</span>
+                            <div>
+                                <strong>Build projects that work</strong>
+                                <p>
+                                    Create more complete applications, improve my portfolio,
+                                    and learn to explain the decisions behind my work.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span>03</span>
+                            <div>
+                                <strong>Learn the hard way when needed</strong>
+                                <p>
+                                    Become comfortable debugging, asking better questions,
+                                    accepting feedback, and learning from mistakes.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span>04</span>
+                            <div>
+                                <strong>Grow into a professional developer</strong>
+                                <p>
+                                    Gain practical experience, collaborate with others,
+                                    and work toward a career in web or software development.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span>05</span>
+                            <div>
+                                <strong>Keep learning and earning</strong>
+                                <p>
+                                    Use my skills to create value, support my goals,
+                                    and build a stable future.
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section-wrap section-block contact-section" id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">06 / LET'S CONNECT</p>
+                <h2>HAVE SOMETHING <span>IN MIND?</span></h2>
+                <p class="section-description">
+                    For questions, collaboration, or a quick conversation,
+                    you can reach me here.
                 </p>
-            </article>
+            </div>
+
+            <div class="contact-grid">
+
+                <!-- CONTACT PROFILE CARD -->
+                <div class="contact-card panel">
+                    <div class="contact-avatar">
+                        <img
+                            src="EMAIL_PROF.jpg"
+                            alt="Profile photo of Earhl Nash Dumaquita"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                        >
+
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">＋</span>
+                            <strong>YOUR PHOTO</strong>
+                            <small>EMAIL_PROF.jpg</small>
+                        </div>
+                    </div>
+
+                    <p class="eyebrow">EARHL NASH DUMAQUITA / STEINZ</p>
+
+                    <a class="email-link" href="mailto:earhlnash02@gmail.com">
+                        earhlnash02@gmail.com <span>↗</span>
+                    </a>
+
+                    <a
+                        class="inline-link"
+                        href="https://github.com/steInz02"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GITHUB PROFILE <span>↗</span>
+                    </a>
+
+                    <a
+                        class="inline-link"
+                        href="https://www.facebook.com/itz.naszio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        FACEBOOK PROFILE <span>↗</span>
+                    </a>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <form class="contact-form panel" id="contact-form">
+                    <div class="panel-title">
+                        <span class="red-square"></span>
+                        SEND A MESSAGE
+                    </div>
+
+                    <label for="sender-name">YOUR NAME</label>
+                    <input
+                        type="text"
+                        id="sender-name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                    <label for="sender-email">YOUR EMAIL</label>
+                    <input
+                        type="email"
+                        id="sender-email"
+                        name="email"
+                        placeholder="name@example.com"
+                        required
+                    >
+
+                    <label for="message">MESSAGE</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+                    <button
+                        class="button button-primary submit-button"
+                        type="submit"
+                    >
+                        PREPARE EMAIL <span>↗</span>
+                    </button>
+
+                    <p class="form-note">
+                        This form opens your email application with the message filled in.
+                        It does not send or store messages on this website.
+                    </p>
+
+                    <p
+                        class="form-status"
+                        id="form-status"
+                        aria-live="polite"
+                    ></p>
+                </form>
+
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 My Developer Portfolio. All Rights Reserved.</p>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <a class="footer-brand" href="#home">
+            STEINZ<span>_</span>
+        </a>
+
+        <p>Built with patience, curiosity, and a little bit of code.</p>
+
+        <small>
+            © <span id="year">2026</span>
+            EARHL NASH DUMAQUITA. ALL RIGHTS RESERVED.
+        </small>
+
+        <a class="back-top" href="#home">BACK TO TOP ↑</a>
     </footer>
 
 </body>
