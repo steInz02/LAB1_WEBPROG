@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #10101c;
+            color: #f5f5f5;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #19192b;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h2 {
+            color: #b89cff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #b89cff;
+        }
+
+        section {
+            padding: 75px 10%;
+        }
+
+        .hero {
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #b89cff;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin-top: 15px;
+        }
+
+        h2 {
+            color: #b89cff;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: #1c1c30;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skills span {
+            background: #30264a;
+            color: #d8c8ff;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        a {
+            color: #c9aaff;
+        }
+
+        footer {
+            background: #19192b;
+            text-align: center;
+            padding: 25px;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>My Portfolio.</h2>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#goals">Goals</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home" class="hero">
+            <p>HELLO! WELCOME TO MY PORTFOLIO</p>
+            <h1>Hi, I'm [Your Name].</h1>
+            <h3>Aspiring Web Developer | BSIT Student</h3>
+
+            <p>
+                I am an aspiring developer who enjoys learning
+                about technology, creating websites, and exploring
+                new ways to solve problems through programming.
+            </p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+
+            <article class="card">
+                <p>
+                    I am a Bachelor of Science in Information Technology
+                    student who is currently developing my knowledge
+                    and skills in programming and web development.
+                    I enjoy exploring technology and learning how
+                    websites and applications are created.
+                </p>
+
+                <p>
+                    I believe that every project is an opportunity
+                    to improve my abilities, gain experience,
+                    and discover something new.
+                </p>
+            </article>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+
+            <div class="card">
+                <div class="skills">
+                    <span>HTML (Beginner)</span>
+                    <span>CSS (Beginner)</span>
+                    <span>Python (Beginner)</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <article class="card">
+                <h3>My First GitHub Project</h3>
+                <p>
+                    This is my first personal developer portfolio,
+                    created using HTML as part of my Web Programming
+                    laboratory activity.
+                </p>
+                <p>Status: In Progress</p>
+            </article>
+
+            <article class="card">
+                <h3>Other Academic Projects</h3>
+                <p>
+                    I am currently exploring different programming
+                    activities and system development projects
+                    as part of my IT studies.
+                </p>
+            </article>
+        </section>
+
+        <section id="goals">
+            <h2>Career Goals</h2>
+
+            <article class="card">
+                <p>
+                    My goal is to become a skilled web developer
+                    with a strong foundation in front-end and
+                    back-end development.
+                </p>
+
+                <p>
+                    I want to gain practical experience, build
+                    useful applications, continuously improve
+                    my programming skills, and eventually work
+                    with a team of developers to create meaningful
+                    digital solutions.
+                </p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <article class="card">
+                <p>GitHub:
+                    <a href="https://github.com/steInz02" target="_blank">
+                        github.com/steInz02
+                    </a>
+                </p>
+
+                <p>Email:
+                    <a href="mailto:earhlnash02@gmail.com">
+                        earhlnash02@gmail.com
+                    </a>
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Developer Portfolio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
